@@ -14,6 +14,9 @@ public interface TarefaConverter {
     @Mapping(source = "id", target = "id")
     @Mapping(source = "dataEvento", target = "dataEvento")
     @Mapping(source = "dataCriacao", target = "dataCriacao")
+    @Mapping(source = "descricao", target = "descricao")
+    @Mapping(source = "emailUsuario", target = "emailUsuario")
+    @Mapping(source = "statusNotificacaoEnum", target = "statusNotificacaoEnum")
 
     TarefasEntity paraTarefaEntity(TarefasDTO dto);
 
