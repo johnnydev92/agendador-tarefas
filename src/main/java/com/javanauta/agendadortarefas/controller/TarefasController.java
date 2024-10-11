@@ -45,7 +45,7 @@ public class TarefasController {
     @DeleteMapping
     public ResponseEntity<Void> deletaTarefaPorId(@RequestParam("id") String id){
 
-        tarefasService.deletadTarefasPorId(id);
+        tarefasService.deletaTarefasPorId(id);
 
         return ResponseEntity.ok().build();
     }
@@ -59,7 +59,7 @@ public class TarefasController {
     @PutMapping
     public ResponseEntity<TarefasDTO> updateTarefas(@RequestBody TarefasDTO dto, @RequestParam("id") String id){
 
-        return ResponseEntity.ok(tarefasService.updateTarefas(dto, id));
+        return ResponseEntity.ok(tarefasService.updateDeTarefas(dto, id));
     }
 
 }

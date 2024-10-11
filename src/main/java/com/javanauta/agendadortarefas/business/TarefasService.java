@@ -49,7 +49,7 @@ public class TarefasService {
         return tarefaConverter.paraListaTarefasDTO(listaTarefas);
     }
 
-    public void deletadTarefasPorId(String id) {
+    public void deletaTarefasPorId(String id) {
         try {
             tarefasRepository.deleteById(id);
         } catch (ResourceNotFoundException e) {
@@ -70,7 +70,7 @@ public class TarefasService {
         }
     }
 
-    public TarefasDTO updateTarefas(TarefasDTO dto, String id) {
+    public TarefasDTO updateDeTarefas(TarefasDTO dto, String id) {
         try {
             TarefasEntity entity = tarefasRepository.findById(id).
                     orElseThrow(() -> new ResourceNotFoundException("Tarefa não encontrada " + id));
